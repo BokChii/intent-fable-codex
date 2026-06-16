@@ -1,0 +1,36 @@
+{
+  "name": "intent-fable-codex",
+  "version": "0.1.0",
+  "description": "Intent-locked, evidence-gated Codex workflow that combines light task routing with optional goal and findings gates.",
+  "author": {
+    "name": "Local Codex Workspace"
+  },
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "skill",
+    "workflow",
+    "output-lock",
+    "verification",
+    "findings",
+    "goal-ledger",
+    "tool-budget"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Intent Fable Codex",
+    "shortDescription": "Intent lock plus evidence gates.",
+    "longDescription": "Intent Fable Codex is a local Codex skill prototype that combines fable-mode style output locking, depth and tool budgets, and visible route contracts with FableCodex style evidence checkpoints, findings gates, and final verification discipline.",
+    "developerName": "Local Codex Workspace",
+    "category": "Productivity",
+    "capabilities": [
+      "Guidance"
+    ],
+    "defaultPrompt": [
+      "Use @intent-fable-codex for this task.",
+      "Lock intent, then implement and verify.",
+      "Track findings before final completion."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

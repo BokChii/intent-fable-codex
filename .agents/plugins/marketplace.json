@@ -1,0 +1,20 @@
+{
+  "name": "intent-fable-codex",
+  "interface": {
+    "displayName": "Intent Fable Codex"
+  },
+  "plugins": [
+    {
+      "name": "intent-fable-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/intent-fable-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
