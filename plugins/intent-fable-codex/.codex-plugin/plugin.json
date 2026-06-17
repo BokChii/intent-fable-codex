@@ -1,6 +1,6 @@
 {
   "name": "intent-fable-codex",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Intent-locked, evidence-gated Codex workflow that combines light task routing with optional goal and findings gates.",
   "author": {
     "name": "Local Codex Workspace"

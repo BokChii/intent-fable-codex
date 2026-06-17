@@ -16,6 +16,7 @@ class IntentFableCodexTests(unittest.TestCase):
         manifest = json.loads((PLUGIN / ".codex-plugin" / "plugin.json").read_text(encoding="utf-8"))
 
         self.assertEqual(manifest["name"], "intent-fable-codex")
+        self.assertEqual(manifest["version"], "0.1.1")
         self.assertEqual(manifest["skills"], "./skills/")
         self.assertEqual(manifest["license"], "MIT")
         self.assertIsInstance(manifest["interface"]["defaultPrompt"], list)
@@ -34,6 +35,8 @@ class IntentFableCodexTests(unittest.TestCase):
             "Tool",
             "Delegation",
             "Route:",
+            "Tool=none",
+            "next decision set",
         ]:
             self.assertIn(expected, skill)
 

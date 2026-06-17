@@ -31,8 +31,8 @@ def validate_manifest() -> None:
     data = json.loads(require_file(MANIFEST))
     if data.get("name") != "intent-fable-codex":
         fail("plugin manifest name mismatch")
-    if data.get("version") != "0.1.0":
-        fail("plugin version should be 0.1.0")
+    if data.get("version") != "0.1.1":
+        fail("plugin version should be 0.1.1")
     prompts = data.get("interface", {}).get("defaultPrompt")
     if not isinstance(prompts, list) or not 1 <= len(prompts) <= 3:
         fail("defaultPrompt must be a list of 1 to 3 prompts")
@@ -70,6 +70,8 @@ def validate_skill() -> None:
         "findings",
         "verification",
         "Route:",
+        "Tool=none",
+        "next decision set",
     ]
     for needle in required:
         if needle not in text:

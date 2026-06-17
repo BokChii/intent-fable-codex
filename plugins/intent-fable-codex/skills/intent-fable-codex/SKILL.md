@@ -33,6 +33,15 @@ Route: Lock=implementation | Layer=L2 | Procedure=P2 | Tool=T2 | Grounding=repo+
 
 The route line is a public work contract, not hidden reasoning.
 
+Keep route fields accurate:
+
+- `Tool=none` only when no tools were used and no tool-backed evidence is needed.
+- Use `Tool=T1` when reading skill files, repository files, docs, logs, or other references.
+- Use `Tool=T2` when making bounded edits or running narrow checks.
+- Use `Tool=T3` when runtime, browser, screenshot, current-source, visual, or asset checks are required.
+- Do not say `Procedure=ask-first` unless you actually stop to ask before deciding or implementing.
+- If you read this skill or its references before answering, reflect that in `Tool` or `Grounding` instead of pretending the answer was tool-free.
+
 ## When To Stay Light
 
 Use the light path for:
@@ -94,6 +103,13 @@ Then choose the right substrate:
 - DOM, CSS layout, canvas, SVG, WebGL, fixed-frame, asset-grounded media, or hybrid
 
 Renderable or executable artifacts need natural-environment verification, a screenshot/runtime check, a targeted test, or an explicit capability-gap report.
+
+For `design-artifact` outputs, end with the smallest useful next decision set. Name only the choices that would materially change implementation, such as:
+
+- fidelity: conceptual, simplified interactive model, or source-grounded model
+- substrate: DOM, canvas, SVG, WebGL, native document, or hybrid
+- grounding: provided equations, assets, brand rules, measurements, or explicit simplification
+- trigger: whether the next step is implementation, research, visual exploration, or another decision
 
 ## Final Response
 
